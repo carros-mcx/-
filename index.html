@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>心声议站 - 校园心理疾病娱乐化干预论坛</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="返回论坛首页">
+      <span class="brand-mark">心</span>
+      <span>
+        <strong>心声议站</strong>
+        <small>校园讨论与干预方案</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#topics">讨论</a>
+      <a href="#intervention">干预</a>
+      <a href="#rewrite">语言工具</a>
+      <a href="#process">书写过程</a>
+      <a href="#new-post">发帖</a>
+    </nav>
+
+    <div class="user-box" id="userBox">
+      <button class="ghost-button" id="openLogin" type="button">登录</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">校园干预型交流论坛</p>
+        <h1>从网络玩梗到认真理解，学校可以怎样回应？</h1>
+        <p class="hero-copy">
+          这里关注心理疾病被娱乐化、标签化和流量化后的校园影响。论坛支持登录、发帖、回复，也把讨论进一步整理成学校可以执行的干预措施。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#new-post">发布讨论</a>
+          <a class="secondary-button" href="#intervention">查看干预方案</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="论坛核心数据">
+        <div>
+          <span class="stat-number" id="postCount">0</span>
+          <span class="stat-label">条讨论</span>
+        </div>
+        <div>
+          <span class="stat-number">4</span>
+          <span class="stat-label">类干预路径</span>
+        </div>
+        <div>
+          <span class="stat-number">1</span>
+          <span class="stat-label">个校园目标</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="notice" aria-label="社区提示">
+      <strong>社区提醒</strong>
+      <p>本论坛用于学习、研究和校园干预设计，不提供医学诊断。请避免嘲讽、污名化或用疾病标签攻击他人。</p>
+    </section>
+
+    <section class="toolbar" id="topics" aria-label="讨论筛选">
+      <div>
+        <p class="section-kicker">讨论区</p>
+        <h2>从现象讨论走向校园行动</h2>
+      </div>
+      <div class="filters">
+        <input id="searchInput" type="search" placeholder="搜索标题、内容或作者">
+        <select id="categoryFilter" aria-label="选择分类">
+          <option value="全部">全部分类</option>
+          <option value="现象记录">现象记录</option>
+          <option value="学生感受">学生感受</option>
+          <option value="影响分析">影响分析</option>
+          <option value="校园干预">校园干预</option>
+          <option value="资源推荐">资源推荐</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="forum-layout">
+      <div class="post-list" id="postList" aria-live="polite"></div>
+
+      <aside class="side-panel">
+        <section>
+          <h3>热门问题</h3>
+          <ul class="plain-list">
+            <li>把焦虑、抑郁做成玩梗内容，会削弱真实痛苦吗？</li>
+            <li>短视频平台如何放大“病感人设”？</li>
+            <li>青少年如何区分共情、模仿和自我诊断？</li>
+            <li>学校怎样把讨论转化成支持系统？</li>
+          </ul>
+        </section>
+        <section>
+          <h3>讨论准则</h3>
+          <ul class="plain-list">
+            <li>讲现象，也尊重个体经历。</li>
+            <li>批评传播方式，不攻击具体患者。</li>
+            <li>引用案例时保护隐私。</li>
+            <li>提出方案时说明适用对象和执行方式。</li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+
+    <section class="composer" id="new-post">
+      <div>
+        <p class="section-kicker">发帖讨论</p>
+        <h2>提出一个值得被认真讨论的问题</h2>
+      </div>
+      <form id="postForm">
+        <label>
+          标题
+          <input id="postTitle" type="text" maxlength="60" placeholder="例如：心理疾病玩梗会不会让求助变得更困难？" required>
+        </label>
+        <label>
+          分类
+          <select id="postCategory" required>
+            <option value="现象记录">现象记录</option>
+            <option value="学生感受">学生感受</option>
+            <option value="影响分析">影响分析</option>
+            <option value="校园干预">校园干预</option>
+            <option value="资源推荐">资源推荐</option>
+          </select>
+        </label>
+        <label>
+          正文
+          <textarea id="postBody" rows="6" maxlength="800" placeholder="写下你的观察、问题、例子、感受或干预建议。请保持尊重和理性。" required></textarea>
+        </label>
+        <button class="primary-button" type="submit">发布帖子</button>
+      </form>
+    </section>
+
+    <section class="intervention" id="intervention">
+      <p class="section-kicker">校园干预措施</p>
+      <h2>把讨论变成学校可以执行的行动</h2>
+      <div class="intervention-grid">
+        <article>
+          <span class="measure-type">课程</span>
+          <h3>心理健康媒介素养课</h3>
+          <p>带学生识别短视频、表情包和社交平台中的心理疾病玩梗、自我诊断和流量化叙事。</p>
+          <dl>
+            <dt>对象</dt>
+            <dd>学生</dd>
+            <dt>目标</dt>
+            <dd>减少误解，提升判断力</dd>
+          </dl>
+        </article>
+        <article>
+          <span class="measure-type">班会</span>
+          <h3>表达与尊重工作坊</h3>
+          <p>围绕真实案例讨论：什么时候是情绪表达，什么时候会变成伤害他人的标签。</p>
+          <dl>
+            <dt>对象</dt>
+            <dd>班级</dd>
+            <dt>目标</dt>
+            <dd>改善同伴语言环境</dd>
+          </dl>
+        </article>
+        <article>
+          <span class="measure-type">支持</span>
+          <h3>匿名求助与转介通道</h3>
+          <p>建立表单、心理老师预约和可信任成年人联系入口，让学生在不被围观的情况下求助。</p>
+          <dl>
+            <dt>对象</dt>
+            <dd>有困扰的学生</dd>
+            <dt>目标</dt>
+            <dd>降低求助压力</dd>
+          </dl>
+        </article>
+        <article>
+          <span class="measure-type">共创</span>
+          <h3>反污名化内容共创</h3>
+          <p>鼓励学生制作海报、短视频和广播稿，把“玩梗”转化成更准确、更有支持感的表达。</p>
+          <dl>
+            <dt>对象</dt>
+            <dd>学生社团</dd>
+            <dt>目标</dt>
+            <dd>形成校园传播作品</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="roadmap" aria-label="学校行动路线图">
+      <p class="section-kicker">行动路线图</p>
+      <h2>学校可以按四步推进</h2>
+      <ol class="timeline">
+        <li>
+          <strong>看见现象</strong>
+          <p>收集校园里常见的网络用语、玩梗案例和学生困惑。</p>
+        </li>
+        <li>
+          <strong>理解原因</strong>
+          <p>分析娱乐化背后的压力表达、群体认同、平台算法和同伴影响。</p>
+        </li>
+        <li>
+          <strong>改变表达</strong>
+          <p>通过班会、课程和宣传作品，引导学生用更准确、更尊重的语言表达情绪。</p>
+        </li>
+        <li>
+          <strong>建立支持</strong>
+          <p>把心理咨询、朋辈支持、教师识别和危机转介连接成持续机制。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="rewrite-tool" id="rewrite">
+      <div>
+        <p class="section-kicker">语言替换工具</p>
+        <h2>把娱乐化表达改成更尊重的表达</h2>
+      </div>
+      <div class="rewrite-layout">
+        <label>
+          输入校园中常见的表达
+          <textarea id="rewriteInput" rows="5" placeholder="例如：你是不是有病？别emo了。"></textarea>
+        </label>
+        <div class="rewrite-result" aria-live="polite">
+          <strong>建议表达</strong>
+          <p id="rewriteOutput">输入一句话后，网站会给出更尊重、更适合校园沟通的说法。</p>
+        </div>
+      </div>
+
+      <div class="rewrite-tags" aria-label="常见替换示例">
+        <button type="button" class="secondary-button mini-tag" data-example="你是不是有病？别emo了。">示例1</button>
+        <button type="button" class="secondary-button mini-tag" data-example="他是抑郁症吧，怎么这么奇怪。">示例2</button>
+        <button type="button" class="secondary-button mini-tag" data-example="你就是焦虑得不行，别装了。">示例3</button>
+        <button type="button" class="secondary-button mini-tag" data-example="他真是神经病，整天闹情绪。">示例4</button>
+      </div>
+
+      <button class="primary-button" id="rewriteButton" type="button">生成建议</button>
+    </section>
+
+    <section class="resources" id="resources">
+      <p class="section-kicker">资源与求助</p>
+      <h2>讨论之外，还要让支持被看见</h2>
+      <div class="resource-strip">
+        <p>如果学生出现持续强烈痛苦、自伤想法或无法保证安全，应立即联系学校心理老师、班主任、可信任成年人或当地紧急援助服务。</p>
+        <p>如果只是想表达压力，可以先找一个安全的人说清楚：“我最近状态不好，想被认真听一听。”</p>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <p class="section-kicker">书写过程</p>
+      <h2>这个干预型论坛如何被写出来</h2>
+      <div class="process-grid">
+        <article>
+          <span>01</span>
+          <h3>确定主题</h3>
+          <p>网站先把问题定为“心理疾病娱乐化的校园影响”，因此页面不做成普通闲聊社区，而是强调研究、讨论和学校行动。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>设计功能</h3>
+          <p>论坛需要登录、发帖、分类、搜索和回复。用户不只是阅读观点，也能把观察补充成可讨论的校园问题。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>组织语言</h3>
+          <p>文案避免把心理疾病当成娱乐符号，而是使用“学生感受”“校园干预”“资源推荐”等词语，引导更负责的表达。</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>形成方案</h3>
+          <p>最终页面把讨论区、干预措施、行动路线图和语言替换工具连在一起，让网站有明确的校园实践目标。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="login-dialog" id="loginDialog">
+    <form id="loginForm" method="dialog">
+      <button class="close-button" id="closeLogin" type="button" aria-label="关闭">×</button>
+      <h2>登录论坛</h2>
+      <p>输入一个昵称即可进入讨论。勾选管理员并输入密码，可以删除不良帖子和回复。</p>
+      <label>
+        昵称
+        <input id="nicknameInput" type="text" maxlength="18" placeholder="例如：观察者A" required>
+      </label>
+      <label class="admin-check">
+        <input id="adminCheckbox" type="checkbox">
+        以管理员身份登录
+      </label>
+      <label class="admin-password" id="adminPasswordBox">
+        管理员密码
+        <input id="adminPasswordInput" type="password" placeholder="课堂演示密码：admin123">
+      </label>
+      <p class="login-error" id="loginError" aria-live="polite"></p>
+      <button class="primary-button" type="submit">进入论坛</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
